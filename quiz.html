@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Mini-QCM pédagogiques sur les réseaux, les systèmes, la cybersécurité, l’intelligence artificielle et le Green IT."
+  >
+  <meta name="theme-color" content="#03100b">
+
+  <title>Learning Arcade — Noureddine Lahmar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+  >
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+
+<body class="quiz-page">
+  <a class="skip" href="#quiz-content">Aller au quiz</a>
+
+  <header class="site-header quiz-header">
+    <a class="brand" href="index.html#accueil" aria-label="Retour au portfolio">
+      <span aria-hidden="true">NL</span>
+      <b>
+        Noureddine Lahmar
+        <small>Learning Arcade</small>
+      </b>
+    </a>
+
+    <a class="button secondary back-link" href="index.html#jeux">
+      <span aria-hidden="true">←</span>
+      Retour au portfolio
+    </a>
+  </header>
+
+  <main class="quiz-shell shell" id="quiz-content">
+    <section class="quiz-intro">
+      <p class="eyebrow">Learning Arcade</p>
+      <h1 id="quiz-title">Testez vos connaissances</h1>
+      <p id="quiz-description">
+        Cinq questions, une correction immédiate et des ressources pour approfondir.
+      </p>
+    </section>
+
+    <nav class="quiz-themes" id="quiz-themes" aria-label="Choisir un thème"></nav>
+
+    <section class="quiz-panel" aria-live="polite">
+      <div class="quiz-progress">
+        <div>
+          <span id="question-counter">Question 1 sur 5</span>
+          <strong id="live-score">Score : 0</strong>
+        </div>
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-label="Progression du quiz"
+          aria-valuemin="0"
+          aria-valuemax="5"
+          aria-valuenow="1"
+          id="progress-track"
+        >
+          <i id="progress-bar"></i>
+        </div>
+      </div>
+
+      <div id="question-view">
+        <div class="question-heading">
+          <span class="question-icon" id="question-icon" aria-hidden="true">🌐</span>
+          <div>
+            <p class="question-category" id="question-category">Réseau</p>
+            <h2 id="question-text"></h2>
+          </div>
+        </div>
+
+        <div
+          class="answer-list"
+          id="answer-list"
+          role="group"
+          aria-labelledby="question-text"
+        ></div>
+
+        <div class="answer-feedback" id="answer-feedback" hidden>
+          <div class="feedback-status">
+            <span id="feedback-icon" aria-hidden="true"></span>
+            <strong id="feedback-title"></strong>
+          </div>
+          <p id="feedback-explanation"></p>
+
+          <div class="feedback-actions">
+            <a
+              class="button source-button"
+              id="source-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              En savoir plus
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <button class="button primary" id="next-question" type="button">
+              Question suivante
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="quiz-result" hidden>
+        <span class="result-icon" id="result-icon" aria-hidden="true">🏆</span>
+        <p class="eyebrow">Quiz terminé</p>
+        <h2 id="result-title"></h2>
+        <p id="result-message"></p>
+        <div class="result-score">
+          <strong id="final-score">0/5</strong>
+          <span>bonnes réponses</span>
+        </div>
+
+        <div class="result-actions">
+          <button class="button primary" id="restart-quiz" type="button">
+            Recommencer ce quiz
+          </button>
+          <a class="button secondary" href="index.html#jeux">
+            Choisir depuis le portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <p class="quiz-note">
+      Les ressources proposées renvoient vers des organismes officiels ou des
+      documentations techniques de référence.
+    </p>
+  </main>
+
+  <noscript>
+    <p class="noscript-message">
+      JavaScript doit être activé pour utiliser ces mini-QCM.
+    </p>
+  </noscript>
+
+  <script src="scripts/quiz.js?v=1"></script>
+</body>
+</html>
